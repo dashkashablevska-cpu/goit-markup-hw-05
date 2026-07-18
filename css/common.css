@@ -1,24 +1,21 @@
 :root {
     --primary-font: "Roboto", sans-serif;
     --secondary-font: "Raleway", sans-serif;
-    --primary-text-color: #434455;
-    --title-color: #2e2f42;
+    --primary-color: #2e2f42;
+    --text-color: #434455;
     --accent-color: #4d5ae5;
-    --white-color: #ffffff;
-    --light-color: #f4f4fd;
+}
+
+body {
+    font-family: var(--primary-font);
+    color: var(--text-color);
+    background: #fff;
 }
 
 *,
 *::before,
 *::after {
     box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    color: var(--primary-text-color);
-    background-color: #ffffff;
-    font-family: var(--primary-font);
 }
 
 h1,
@@ -33,19 +30,19 @@ p {
 
 ul,
 ol {
+    list-style: none;
     margin: 0;
     padding: 0;
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
 }
 
 img {
     display: block;
     max-width: 100%;
     height: auto;
+}
+
+a {
+    text-decoration: none;
 }
 
 button,
@@ -55,35 +52,21 @@ textarea {
 }
 
 .container {
-    width: 1158px;
+    width: 100%;
+    max-width: 1158px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
-.section {
-    padding: 120px 0;
-}
 
-.section-title {
-    margin-bottom: 72px;
-    color: var(--title-color);
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 1.11;
-    letter-spacing: 0.02em;
-    text-align: center;
-    text-transform: capitalize;
-}
-
-.visually-hidden {
+.sr-only {
     position: absolute;
     width: 1px;
     height: 1px;
-    margin: -1px;
-    border: 0;
     padding: 0;
-    white-space: nowrap;
+    margin: -1px;
     overflow: hidden;
-    clip: rect(0 0 0 0);
-    clip-path: inset(100%);
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
